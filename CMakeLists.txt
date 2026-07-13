@@ -21,6 +21,7 @@ add_executable(${PROJECT_NAME}.elf
     Core/Src/main.c
     Core/Src/ciu32f003_it.c
     Core/Src/syscalls.c
+    User/Inc/user_led.c
     Drivers/CMSIS/Device/system_ciu32f003.c
     Startup/gcc/startup_ciu32f003.s
     ${STD_DRIVER_SOURCES}
@@ -28,6 +29,7 @@ add_executable(${PROJECT_NAME}.elf
 
 target_include_directories(${PROJECT_NAME}.elf PRIVATE
     Core/Inc
+    User/Src
     Drivers/CMSIS/Core
     Drivers/CMSIS/Device
     Drivers/CIU32F003_Lib/Include

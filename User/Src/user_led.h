@@ -1,8 +1,12 @@
-#include "ciu32f003_std_gpio.h"
+#ifndef USER_LED_H
+#define USER_LED_H
 
-#define LED_PORT GPIOA
-#define LED_PIN GPIO_PIN_0
+#include "ciu32f003_std.h"
 
+#define LED_PORT GPIOB
+#define LED_PIN GPIO_PIN_1
 
 void user_led_init(void);
 void user_led_toggle(void);
+
+#endif
