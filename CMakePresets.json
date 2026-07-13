@@ -1,0 +1,40 @@
+{
+  "version": 6,                   // CMake Presets 最低版本 CMake 3.20.0
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "debug",                                                  // 配置预设名称(命令行使用)
+      "displayName": "Debug",                                           // 配置预设显示名称
+      "generator": "Ninja",                                             // 构建生成器:ninja
+      "binaryDir": "${sourceDir}/build/debug",                          // 构建输出目录
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",    // 工具链文件路径
+      "cacheVariables": {                                               // CMake 编译产生的文件
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",                                                // 配置预设名称(命令行使用)
+      "displayName": "Release",                                         // 配置预设显示名称
+      "generator": "Ninja",                                             // 构建生成器:ninja
+      "binaryDir": "${sourceDir}/build/release",                        // 构建输出目录
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",    // 工具链文件路径
+      "cacheVariables": {                                               // CMake 编译产生的文件
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [                                                     // 构建预设
+    {
+      "name": "debug",                                                  // 构建预设名称(命令行使用)             
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",                                                // 构建预设名称(命令行使用)
+      "configurePreset": "release"
+    }
+  ]
+}

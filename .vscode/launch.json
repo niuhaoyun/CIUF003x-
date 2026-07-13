@@ -1,0 +1,73 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CIU32F003F5Ux (J-Link)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/debug/CIU32F003.elf",
+      "servertype": "jlink",
+      "serverpath": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+      "preLaunchTask": "CMake: build debug",
+      "runToEntryPoint": "main",
+      "device": "CIU32F003F5Ux",
+      "interface": "swd",
+      "serverArgs": [
+        "-speed",
+        "1000"
+      ]
+    },
+    {
+      "name": "Debug CIU32F003F5Px (J-Link)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/debug/CIU32F003.elf",
+      "servertype": "jlink",
+      "serverpath": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+      "preLaunchTask": "CMake: build debug",
+      "runToEntryPoint": "main",
+      "device": "CIU32F003F5Px",
+      "interface": "swd",
+      "serverArgs": [
+        "-speed",
+        "1000"
+      ]
+    },
+    {
+      "name": "Debug CIU32F003W5Sx (J-Link)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/debug/CIU32F003.elf",
+      "servertype": "jlink",
+      "serverpath": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+      "preLaunchTask": "CMake: build debug",
+      "runToEntryPoint": "main",
+      "device": "CIU32F003W5Sx",
+      "interface": "swd",
+      "serverArgs": [
+        "-speed",
+        "1000"
+      ]
+    },
+    {
+      "name": "Debug CIU32F003J5Sx (J-Link)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/debug/CIU32F003.elf",
+      "servertype": "jlink",
+      "serverpath": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+      "preLaunchTask": "CMake: build debug",
+      "runToEntryPoint": "main",
+      "device": "CIU32F003J5Sx",
+      "interface": "swd",
+      "serverArgs": [
+        "-speed",
+        "1000"
+      ]
+    }
+  ]
+}

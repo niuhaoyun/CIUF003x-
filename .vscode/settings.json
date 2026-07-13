@@ -1,0 +1,7 @@
+{
+  "cmake.useCMakePresets": "always", // 使用 CMake Presets 的配置
+  "cmake.configurePreset": "debug",
+  "cmake.buildPreset": "debug",
+  "cmake.buildDirectory": "${workspaceFolder}/build/debug",
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
