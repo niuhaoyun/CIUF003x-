@@ -37,7 +37,7 @@ int main(void)
 
     while (1)
     {
-        user_led_toggle();
-        delay_ms(500U);
+        // user_led_toggle();
+        // delay_ms(500U);
     }
 }
