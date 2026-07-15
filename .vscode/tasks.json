@@ -22,24 +22,9 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "dependsOn": "CMake: configure debug",
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "label": "CMake: build release",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "--preset",
-                "release"
-            ],
-            "group": "build",
-            "dependsOn": "CMake: configure release",
             "problemMatcher": [
                 "$gcc"
             ]
@@ -55,27 +40,19 @@
             "problemMatcher": []
         },
         {
-            "type": "cppbuild",
-            "label": "C/C++: gcc.exe 生成活动文件",
-            "command": "D:\\Program Files (x86)\\MinGW\\mingw64\\bin\\gcc.exe",
+            "label": "CMake: build release",
+            "type": "shell",
+            "command": "cmake",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "--build",
+                "--preset",
+                "release"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
+            "group": "build",
+            "dependsOn": "CMake: configure release",
             "problemMatcher": [
                 "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "调试器生成的任务。"
+            ]
         }
     ]
 }

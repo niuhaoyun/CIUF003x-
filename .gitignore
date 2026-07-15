@@ -1,4 +1,5 @@
 build/
+CMakeUserPresets.json
 .vscode/.cmaketools.json
 .cache/
 *.elf

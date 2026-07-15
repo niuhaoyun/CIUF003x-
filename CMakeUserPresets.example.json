@@ -1,0 +1,33 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "debug-local",
+      "displayName": "Debug (local toolchain example)",
+      "inherits": "debug",
+      "environment": {
+        "ARM_GNU_TOOLCHAIN_ROOT": "D:/Program Files (x86)/Toolchain/arm-gnu-toolchain-15.2.rel1",
+        "PATH": "D:/Program Files (x86)/Toolchain/ninja;D:/Program Files (x86)/Toolchain/arm-gnu-toolchain-15.2.rel1/bin;$penv{PATH}"
+      }
+    },
+    {
+      "name": "release-local",
+      "displayName": "Release (local toolchain example)",
+      "inherits": "release",
+      "environment": {
+        "ARM_GNU_TOOLCHAIN_ROOT": "D:/Program Files (x86)/Toolchain/arm-gnu-toolchain-15.2.rel1",
+        "PATH": "D:/Program Files (x86)/Toolchain/ninja;D:/Program Files (x86)/Toolchain/arm-gnu-toolchain-15.2.rel1/bin;$penv{PATH}"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-local",
+      "configurePreset": "debug-local"
+    },
+    {
+      "name": "release-local",
+      "configurePreset": "release-local"
+    }
+  ]
+}
