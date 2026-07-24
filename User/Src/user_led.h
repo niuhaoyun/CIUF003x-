@@ -1,5 +1,5 @@
-#ifndef USER_LED_H
-#define USER_LED_H
+#ifndef __USER_LED_H__
+#define __USER_LED_H__
 
 #include "ciu32f003_std.h"
 
